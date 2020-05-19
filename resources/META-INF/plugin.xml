@@ -1,0 +1,34 @@
+<idea-plugin>
+  <id>com.your.company.unique.plugin.id</id>
+  <name>Utils Plugin for Developer environment</name>
+  <version>1.0</version>
+  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+  <description>This is sample plugin</description>
+
+  <change-notes>initial change</change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugins in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="com.ms.MsUtils" class="com.ms.MsUtils" text="G Build" description="Building the project using gradle bat">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+    </action>
+      <action id="com.ms.GitUtils" class="com.ms.GitUtils" text="Git Util" description="Git Util">
+          <add-to-group group-id="ToolsMenu" anchor="last"/>
+      </action>
+  </actions>
+
+</idea-plugin>
